@@ -4,14 +4,13 @@ import axios from 'axios';
 
 function App() {
   const [list, setList] = useState([]);
-
   const get = () => {
-    axios.get('http://43.200.104.40/get',{
+    axios.get('http://43.200.104.40:4000/get',{
       params: {
-        korName: "박민선",
-        initial: "PMS",
+        korName: "양재호",
+        initial: "YJH",
         birthDay: "20001125",
-        nameMeaning: ['옥돌', '베풀'],
+        nameMeaning: ['재상'],
       }
     })
       .then(res => {
