@@ -5,7 +5,7 @@ import axios from 'axios';
 function App() {
   const [list, setList] = useState([]);
   const get = () => {
-    axios.get('http://43.200.104.40:4000/get',{
+    axios.get('http://43.200.104.40/get',{
       params: {
         korName: "양재호",
         initial: "YJH",
