@@ -1,16 +1,27 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function App() {
   const [list, setList] = useState([]);
+  // const [value, setValue] = useState({});
+
+  // useEffect(() => {
+  //   console.log("{ korName: '양재호', initial: 'YJH', birthDay: '20020412', nameMeaning: ['재상', '호걸'] }")
+  // }, [])
+
+  // const onChange = (e) => {
+  //   setValue(e.target.value);
+  //   console.log(e.target.value)
+  // }
+
   const get = () => {
-    axios.get('http://43.200.104.40/get',{
-      params: {
-        korName: "양재호",
-        initial: "YJH",
-        birthDay: "20001125",
-        nameMeaning: ['재상'],
+    axios.get('http://43.200.104.40/get', {
+      params: { 
+        korName: '양재호', 
+        initial: 'YJH', 
+        birthDay: '20020412', 
+        nameMeaning: ['재상', '호걸'] 
       }
     })
       .then(res => {
